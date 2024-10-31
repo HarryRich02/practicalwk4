@@ -1,22 +1,79 @@
 <!DOCTYPE html>
 <head>
-    <style>
-        body {background-color:burlywood; font-family:fantasy}
-        h1 {padding:20px; font-size:50px}
-        #intro {text-align:center}
-        ul {font-size:30px}
-    </style>
+  <style>
+    body {
+      background-color: burlywood;
+      font-family: fantasy;
+    }
+    h1 {
+      padding: 20px;
+      font-size: 50px;
+    }
+    #intro {
+      text-align: center;
+    }
+    ul {
+      font-size: 30px;
+    }
+    #floating {
+      position: sticky;
+      top: 0px;
+    }
+    .flex {
+      display: flex;
+    }
+    .flex > div {
+        flex-grow: 1;
+    }
+
+    @media screen and (max-width:768px) {
+        .flex {
+            flex-direction: column;
+        }
+    }
+  </style>
 </head>
 <body>
-    <h1 id="intro">Birds</h1>
-    <p id="intro">Birds are awesome, although not as cool as cats, here are some types of birds:</p>
-    <ul>
+  <h1 id="intro">Birds</h1>
+  <p id="intro">
+    Birds are awesome, although not as cool as cats, here are some types of
+    birds:
+  </p>
+  <div class="flex">
+    <div>
+      <ul>
         <li>smol</li>
-        <img src="https://wildlife-photography.uk/wp-content/uploads/2022/06/stonechat-scott-pollard.jpg", width="400px", height =auto/>
+        <img
+          src="https://wildlife-photography.uk/wp-content/uploads/2022/06/stonechat-scott-pollard.jpg"
+          width="400px"
+          height="auto"
+        />
         <li>creepy</li>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Turkey_vulture_%28Cathartes_aura%29_Orange_Walk.jpg/1200px-Turkey_vulture_%28Cathartes_aura%29_Orange_Walk.jpg", width="400px", height =auto/>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Turkey_vulture_%28Cathartes_aura%29_Orange_Walk.jpg/1200px-Turkey_vulture_%28Cathartes_aura%29_Orange_Walk.jpg"
+          width="400px"
+          height="auto"
+        />
         <li>colourful</li>
-        <img src="https://i.natgeofe.com/n/e3ae5fbf-ddc9-4b18-8c75-81d2daf962c1/3948225_3x4.jpg", width="400px", height =auto>
-    </ul>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/xbs7FT7dXYc?si=X_PR0RTgoFvV6YmH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <img
+          src="https://i.natgeofe.com/n/e3ae5fbf-ddc9-4b18-8c75-81d2daf962c1/3948225_3x4.jpg"
+          width="400px"
+          height="auto"
+        />
+      </ul>
+    </div>
+    <div>
+      <iframe
+        id="floating"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/xbs7FT7dXYc?si=X_PR0RTgoFvV6YmH"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
 </body>
